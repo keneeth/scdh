@@ -1,1 +1,1 @@
-# scdh
+# Strongly Constrained Discrete Hashing
