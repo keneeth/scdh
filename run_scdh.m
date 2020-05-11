@@ -17,6 +17,7 @@ db_data.train_data = normalize(db_data.train_data);
 db_data.test_data = normalize(db_data.test_data);
 % get anchors
 n_anchors = min(2000,Ntrain);
+rand('seed',0);
 anchor = db_data.train_data(randsample(Ntrain, n_anchors),:);
 sigma = 0.4; % for normalized data
 Phi_testdata = exp(-sqrt(sqdist(db_data.test_data,anchor))/(2*sigma*sigma));
